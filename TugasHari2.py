@@ -29,6 +29,24 @@ df.iloc[5:11, 1:3]
 
 # soal no 2
 
+# Persiapan membuat data
+import pandas as pd
+import random
+
+pelajaran = ['Matematika', 'Fisika', 'Biologi', 'Kimia', 'Geologi', 'Ekonomi']
+kelas = ['12A', '12B', '12C', '12D']
+
+hasil_nilai = {
+    'siswa_id' : range(1, 21),
+    'pelajaran' : [random.choice(pelajaran) for i in range(20)],
+    'nilai' : [random.choice(range(0, 100)) for i in range(20)],
+    'jenis-kelamin' : [random.choice(['laki-laki', 'perempuan']) for i in range(20)],
+    'kelas' : [random.choice(kelas) for i in range(20)]
+}
+
+df = pd.DataFrame(hasil_nilai)
+df.head()
+
 # Tampilkan semua data siswa pada mata pelajaran Ekonomi dan Fisika
 
 ekonomi = df['pelajaran'] == 'Ekonomi'
@@ -52,6 +70,24 @@ kelas = df['kelas'] == '12C'
 df[(nilai) & (gender) & (kelas)]
 
 # soal no 3
+
+# Persiapan membuat data
+import pandas as pd
+import random
+
+pelajaran = ['Matematika', 'Fisika', 'Biologi', 'Kimia', 'Geologi', 'Ekonomi']
+kelas = ['12A', '12B', '12C', '12D']
+
+hasil_nilai = {
+    'siswa_id' : range(1, 21),
+    'pelajaran' : [random.choice(pelajaran) for i in range(20)],
+    'nilai' : [random.choice(range(0, 100)) for i in range(20)],
+    'jenis-kelamin' : [random.choice(['laki-laki', 'perempuan']) for i in range(20)],
+    'kelas' : [random.choice(kelas) for i in range(20)]
+}
+
+df = pd.DataFrame(hasil_nilai)
+df.head()
 
 # lakukan data transformasi terhadap column 'nilai' dengan fungsi transformasi, berikut rumus dari normalisasi
 
